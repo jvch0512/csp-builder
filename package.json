@@ -1,0 +1,23 @@
+{
+  "name": "csp-builder",
+  "version": "0.1.0",
+  "description": "Build, parse and lint Content-Security-Policy headers. Typed, zero runtime dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": { "csp-builder": "dist/cli.js" },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test \"dist/test/*.test.js\"",
+    "lint": "tsc --noEmit"
+  },
+  "repository": "github:jvch0512/csp-builder",
+  "keywords": ["csp", "security", "headers", "appsec", "typescript"],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": { "node": ">=20" }
+}
